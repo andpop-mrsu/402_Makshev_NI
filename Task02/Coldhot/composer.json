@@ -10,7 +10,7 @@
         "wp-cli/php-cli-tools": "^0.11.11"
     },
 	"bin": [
-        "bin/cold-hot.php"
+        "bin/cold-hot"
     ],
     "autoload": {
         "files": [
