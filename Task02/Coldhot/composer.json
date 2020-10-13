@@ -19,3 +19,13 @@
         ]
     }
 }
+,
+    "bin": [
+        "bin/tic-tac-toe"
+    ],
+    "autoload": {
+        "files": [
+            "src/Controller.php",
+            "src/View.php"
+        ]
+    }
