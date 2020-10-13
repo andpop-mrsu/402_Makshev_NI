@@ -21,7 +21,7 @@
 }
 ,
     "bin": [
-        "bin/tic-tac-toe"
+        "bin/cold-hot"
     ],
     "autoload": {
         "files": [
