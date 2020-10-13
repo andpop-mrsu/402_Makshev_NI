@@ -19,13 +19,3 @@
         ]
     }
 }
-,
-    "bin": [
-        "bin/cold-hot"
-    ],
-    "autoload": {
-        "files": [
-            "src/Controller.php",
-            "src/View.php"
-        ]
-    }
