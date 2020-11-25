@@ -1,11 +1,8 @@
-var hiddenNumber = [Math.floor((Math.random() * 10)), Math.floor((Math.random() * 10)), 
-Math.floor((Math.random() * 10))];
-hiddenNumber = hiddenNumber.join('');
-hiddenNumber = hiddenNumber.split('');
+import { shuffle, hiddenNumber } from './Model.js';
 
-function calc() {
-	currentNumber = document.getElementById("guess").value;
-	currentCheckNumber = Number(currentNumber);
+export function startGame() {
+	let currentNumber = document.getElementById("guess").value;
+	let currentCheckNumber = Number(currentNumber);
 
 	if (!Number.isInteger(currentCheckNumber)) {
     	alert('Ошибка! Введите число.');
@@ -18,14 +15,14 @@ function calc() {
 	}
 
 	currentNumber = currentNumber.split('');
-	heat_array = hiddenNumber.filter(value => currentNumber.includes(value));
+	let heat_array = hiddenNumber.filter(value => currentNumber.includes(value));
 
-	currentStrNumber = currentNumber.toString();
-	hiddenStrNumber = hiddenNumber.toString();
+	let currentStrNumber = currentNumber.toString();
+	let hiddenStrNumber = hiddenNumber.toString();
  
 	  if (currentStrNumber == hiddenStrNumber) {
 	    alert('Вы выиграли!');
-	    return;
+	    location.reload();
 	} else if ((currentNumber[0] == hiddenNumber[0]) || (currentNumber[1] == hiddenNumber[1]) 
 		|| (currentNumber[2] == hiddenNumber[2])) {
 		alert('Горячо!');
@@ -34,5 +31,4 @@ function calc() {
 	  } else {
 	  	alert('Холодно!');
 	  }
-
 }
